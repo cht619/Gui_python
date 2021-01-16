@@ -101,24 +101,35 @@ def set_listbox():
     # 下拉框
     var1 = tk.StringVar()
     # set label
-    l = tk.Label(window, bg='green', fg='yellow')
-    l.pack()
+    l = tk.Label(window, bg='green', fg='blue', width=20)
+    # l.pack()
 
     def print_selection():
         value = lb.get(lb.curselection()) # 获取当取选中的样本
-        val1.set(value)
+        var1.set(value)
 
     # set button
-    b1 = tk.Button(window, text='print selection', command=print_selection)
-    b1.pack()
+    b1 = tk.Button(window, text='print selection', command=print_selection).grid(row=1)
+    # b1.pack()
 
     # create Listbox
     var2=tk.StringVar()
-    var2.set((1, 2, 3, 4))
-    lb = tk.Listbox(window, listvariable=var2)
+    var2.set(('ADDA', 'DANN', 'CDAN', 'DAN'))
+    lb = tk.Listbox(window, listvariable=var2).grid(row=2)
+
+    list_items = [11, 22, 33, 44]
+    # for item in list_items:
+    #     lb.insert('end', item)  # insert 就是最开始
+    # lb.insert(1, 'first')  # 根据index堆上面的var2进行添加
+    # lb.insert(2, 'second')
+    # lb.delete(2)  # 删除第二个位置的字符
+    # lb.pack()
+
+    window.mainloop()
+
 
 
 
 
 if __name__ == '__main__':
-    set_text()
+    set_listbox()
