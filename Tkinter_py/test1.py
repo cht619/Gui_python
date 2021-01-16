@@ -10,6 +10,10 @@
 
 import tkinter as tk
 
+window = tk.Tk()
+window.title('Entry')
+window.geometry('500x300')
+
 
 def set_button():
     on_hit = False
@@ -62,5 +66,59 @@ def set_entry():
 
     window.mainloop()
 
+
+def set_text():
+    # how to use text!
+    window = tk.Tk()
+    window.title('Entry')
+    window.geometry('500x300')
+    e = tk.Entry(window, show=None)
+    e.pack()
+
+    # the function must before the button setting
+    def insert_point():
+        var = e.get() # 获取鼠标的位置
+        t.insert('insert', var)
+
+    def insert_end():
+        # 文本框最后面接着插入内容
+        var = e.get()
+        t.insert('end', var)  # 无论鼠标选中哪里一定是在最后面那里插入
+
+    # set button
+    b1 = tk.Button(window, text='insert point', height=2, command=insert_point)
+    b1.pack()
+    b2 = tk.Button(window, text='insert_end', height=2, command=insert_end)
+    b2.pack()
+
+    t = tk.Text(window, height=5)
+    t.pack()
+
+    window.mainloop()
+
+
+def set_listbox():
+    # 下拉框
+    var1 = tk.StringVar()
+    # set label
+    l = tk.Label(window, bg='green', fg='yellow')
+    l.pack()
+
+    def print_selection():
+        value = lb.get(lb.curselection()) # 获取当取选中的样本
+        val1.set(value)
+
+    # set button
+    b1 = tk.Button(window, text='print selection', command=print_selection)
+    b1.pack()
+
+    # create Listbox
+    var2=tk.StringVar()
+    var2.set((1, 2, 3, 4))
+    lb = tk.Listbox(window, listvariable=var2)
+
+
+
+
 if __name__ == '__main__':
-    set_entry()
+    set_text()
