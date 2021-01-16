@@ -2,7 +2,7 @@
 # @Time : 2020/12/23 21:14
 # @Author : CHT
 # @Site : 
-# @File : asd.py
+# @File : qt1.py
 # @Software: PyCharm 
 # @Blog: https://www.zhihu.com/people/xia-gan-yi-dan-chen-hao-tian
 # @Function:
