@@ -136,7 +136,7 @@ def set_listbox():
 
 def set_canvas():
     canvas = tk.Canvas(window, bg='green', height=1000, width=1000)
-    image_file = tk.PhotoImage(file=r'C:\Users\Administrator\Desktop\frame_0001.png')
+    image_file = ImageTk.PhotoImage(file=r'C:\Users\Administrator\Desktop\frame_0001.png')
     # 图片要放在画布canvas的哪个位置 (250, 0)
     image = canvas.create_image(0, 0, anchor='n', image=image_file)
     # 定义多边形参数，然后在画布上画出指定图形
@@ -218,7 +218,7 @@ def set_Manager():
     # tk.Label(window, text='P', fg='red').pack(side='left')  # 左
     # tk.Label(window, text='P', fg='red').pack(side='right')  # 右
 
-    # pace 精确定位 nw: north west 西北
+    # place 精确定位 nw: north west 西北
     # tk.Label(window, text='Pl', font=('Arial', 20), ).place(x=50, y=100, anchor='nw')
 
     window.mainloop()
@@ -242,4 +242,4 @@ def set_Toplevel():
 
 
 if __name__ == '__main__':
-    set_Toplevel()
+    set_canvas()

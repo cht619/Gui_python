@@ -16,7 +16,7 @@ import pickle
 def login():
     window = tk.Tk()
     window.title('Transfer Learning')
-    window.geometry('400x300')
+    window.geometry('700x500')
 
     # set a image
     canvas = tk.Canvas(window, width=400, height=135, bg='green')
@@ -26,14 +26,15 @@ def login():
     tk.Label(window, text='Welcome!', font=('Arial', 16)).pack()
 
     # user information
-    tk.Label(window, text='User name:', font=('Arial', 14)).place(x=10, y=170)
+    tk.Label(window, text='ADDA, DANN, DAN, CDAN, SSDA, TAT', font=('Arial', 15)).place(x=170, y=120)
+    tk.Label(window, text='Transfer learning approaches:', font=('Arial', 14)).place(x=10, y=170)
     tk.Label(window, text='Password:', font=('Arial', 14)).place(x=10, y=210)
 
     # input Entry
     var_user_name = tk.StringVar()
     var_user_name.set('xxx@gmail.com')  # initial value
     entry_user_name = tk.Entry(window, textvariable=var_user_name, font=('Arial', 14))
-    entry_user_name.place(x=120, y=175)
+    entry_user_name.place(x=300, y=175)
 
     var_usr_pwd = tk.StringVar()
     entry_usr_pwd = tk.Entry(window, textvariable=var_usr_pwd, font=('Arial', 14), show='*')
